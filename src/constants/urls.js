@@ -1,4 +1,4 @@
-const baseurl = process.env.REACT_APP_API
+const baseURL = process.env.REACT_APP_API
 
 const urls = {
     users: './users',
@@ -6,7 +6,8 @@ const urls = {
     comments: './comments'
 }
 
-export default baseurl
+export default baseURL
 export {
     urls
 }
+

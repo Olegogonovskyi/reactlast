@@ -1,10 +1,9 @@
-import {Users, User} from './Components';
+import { User} from './Components';
 
 const App = () => {
   return (
     <div>
-      <Users/>
-        Олег
+
         <User/>
     </div>
   );
