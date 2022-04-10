@@ -4,6 +4,7 @@ const App = () => {
   return (
     <div>
       <Users/>
+        Олег
         <User/>
     </div>
   );
