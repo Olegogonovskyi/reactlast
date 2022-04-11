@@ -1,10 +1,10 @@
-import { User} from './Components';
+import {Users} from './Components';
+import css from './app.module.css'
 
 const App = () => {
   return (
-    <div>
-
-        <User/>
+    <div className={css.wrap}>
+        <Users/>
     </div>
   );
 }
