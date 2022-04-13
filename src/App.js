@@ -6,12 +6,13 @@ import {Carform, Cars} from './Components';
 
 
 const App = () => {
+
     const [newcar, setnewcar] = useState(null);
   return (
     <div>
         <Carform setnewcar={setnewcar}/>
         <hr/>
-        <Cars newcar={newcar}/>
+        <Cars newcar={newcar} />
 
     </div>
   );

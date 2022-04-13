@@ -1,1 +1,1 @@
-import * from './carValidator'
+export * from './carValidator'
