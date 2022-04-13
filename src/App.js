@@ -1,14 +1,17 @@
+import {useState} from 'react';
+
 import {Carform, Cars} from './Components';
 
 
 
 
 const App = () => {
+    const [newcar, setnewcar] = useState(null);
   return (
     <div>
-        <Carform/>
+        <Carform setnewcar={setnewcar}/>
         <hr/>
-        <Cars/>
+        <Cars newcar={newcar}/>
 
     </div>
   );
