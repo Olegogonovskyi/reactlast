@@ -1,9 +1,13 @@
+import {Routes, Route, Navigate} from "react-router-dom";
+import {Mainlayout} from './Layout';
 
 const App = () => {
   return (
-    <div>
-      app
-    </div>
+    <Routes>
+      <Route path={'/'} element={<Mainlayout/>}/>
+
+
+    </Routes>
   );
 }
 
