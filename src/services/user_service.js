@@ -1,5 +1,5 @@
 import {axios_service} from './axios_service';
-import {urls} from '../constants/urls';
+import {urls} from '../constants';
 
 const user_service = {
     getall: () => axios_service.get(urls.users),

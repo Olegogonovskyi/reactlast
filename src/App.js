@@ -7,8 +7,9 @@ const App = () => {
   return (
     <Routes>
       <Route path={'/'} element={<Mainlayout/>}>
-        <Route path={'Users'} element={<Users/>}/>
-        <Route path={'Posts'} element={<Posts/>}/>
+          <Route index element = {<Navigate to ={`users`}/>}/>
+        <Route path={'users'} element={<Users/>}/>
+        <Route path={'posts'} element={<Posts/>}/>
 
 
 

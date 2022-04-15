@@ -1,12 +1,13 @@
 import {useState, useEffect} from 'react';
 
-import {user_service} from '../../services/user_service'
+import {User} from '../User/User'
+import {user_service} from '../../services'
 
-const User = () => {
-    const {users, setusers} = useState([]);
+const Users = () => {
+    const [users, setusers] = useState([]);
     useEffect(()=> {
-        user_service.getAll().then(({data})=> setusers(data))
-    })
+        user_service.getall().then(({data})=> setusers(data))
+    }, [])
     return (
         <div>
             {users.map(user=><User key={user.id} user={user}/>)}
@@ -14,4 +15,4 @@ const User = () => {
     );
 };
 
-export {User};
+export {Users};

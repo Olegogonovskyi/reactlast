@@ -1,15 +1,13 @@
 import React from 'react';
 
-const Users = (user) => {
-    const {id, name, email} = user
+const User = ({user}) => {
+    const {id, name, email} = user;
     return (
         <div>
-            <div>id: {id}</div>
-            <div>name: {name}</div>
-            <div>email: {email}</div>
+            {id} {name} {email}
 
         </div>
     );
 };
 
-export {Users};
+export {User};
