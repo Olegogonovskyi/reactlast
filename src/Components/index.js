@@ -1,5 +1,5 @@
-export * from './User';
-export * from './Users';
-export * from './Posts';
-export * from './Post';
-export * from './export';
+export * from './User/User';
+export * from './Users/Users';
+export * from './Posts/Posts';
+export * from './Post/Post';
+
