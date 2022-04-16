@@ -1,16 +1,16 @@
 import {useState, useEffect} from 'react';
 
 import {Post} from '../Post/Post'
-import {user_service} from '../../services'
+import {post_service} from '../../services'
 
 const Posts = () => {
     const [posts, setposts] = useState([]);
     useEffect(()=> {
-        user_service.getall().then(({data})=> setusers(data))
+        post_service.getall().then(({data})=> setposts(data))
     }, [])
     return (
         <div>
-            {users.map((user)=><User key={user.id} user={user}/>)}
+            {posts.map((post)=><Post key={post.id} post={post}/>)}
         </div>
     );
 };

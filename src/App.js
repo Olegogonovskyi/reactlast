@@ -1,6 +1,6 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 import {Mainlayout} from './Layout';
-import {Users, Posts} from './Components'
+import {Users, Posts, Singleuser} from './Components'
 import React from "react";
 
 const App = () => {
@@ -8,7 +8,9 @@ const App = () => {
     <Routes>
       <Route path={'/'} element={<Mainlayout/>}>
           <Route index element = {<Navigate to ={`users`}/>}/>
-        <Route path={'users'} element={<Users/>}/>
+        <Route path={'users'} element={<Users/>}>
+            <Route path={`:id`} element = {<Singleuser/>}/>
+        </Route>
         <Route path={'posts'} element={<Posts/>}/>
 
 
