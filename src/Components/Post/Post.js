@@ -4,7 +4,7 @@ const Post = ({post}) => {
     const {id, title, body} = post
     return (
         <div>
-            {id}: {title} {body} <Link to={`${id}`}>Details</Link>
+            {id}: {title} {body}
             <hr/>
         </div>
     );
