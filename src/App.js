@@ -9,7 +9,9 @@ const App = () => {
       <Route path={'/'} element={<Mainlayout/>}>
           <Route index element = {<Navigate to ={`users`}/>}/>
         <Route path={'users'} element={<Users/>}>
-            <Route path={`:id`} element = {<Singleuser/>}/>
+            <Route path={`:id`} element = {<Singleuser/>}>
+                <Route path={':posts'} element={<Posts/>}/>
+            </Route>
         </Route>
         <Route path={'posts'} element={<Posts/>}/>
 
