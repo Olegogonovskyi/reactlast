@@ -8,7 +8,7 @@ const Userdetails = ({user}) => {
             <div>id: {id}</div>
             <div>name: {name}</div>
             <div>email: {email}</div>
-            <Link to={`post`} >Details</Link>
+            <Link to={`posts`}  >Details</Link>
             <hr/>
             <hr/>
 

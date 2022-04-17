@@ -7,17 +7,17 @@ import {user_service} from "../../services";
 
 const Singleuser = () => {
     const {state} = useLocation();
-    const {id} = useParams()
+    const {userid} = useParams()
     const [user, setuser] = useState(state);
 
     useEffect(()=>{
         if (!state) {
-            user_service.getbyId(id).then(({data})=>setuser(data))
+            user_service.getbyId(userid).then(({data})=>setuser(data))
         } else {
             setuser(state)
         }
 
-    }, [id, state])
+    }, [userid, state])
     return (
         <div>
             <div>{user && <Userdetails user = {user}/>}</div>

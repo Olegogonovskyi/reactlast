@@ -5,3 +5,5 @@ export * from './Post/Post';
 export * from './singleuser/singleuser';
 export * from './Users/Users.module.css'
 export * from './Userdetails/userdetails'
+export * from './Singleuserpost/singleuserpost'
+export * from './Singleuserposts/singleuserposts'
