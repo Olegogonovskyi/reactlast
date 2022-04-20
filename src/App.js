@@ -1,8 +1,9 @@
 
 import {useReducer} from "react";
 const init = (initCount) => {
-    firstCount: initCount
-    secondCount: initCount
+    return{firstCount: initCount,
+        secondCount: initCount}
+
 }
 const reducer = (state, action) => {
     switch (action.type) {
@@ -11,7 +12,11 @@ const reducer = (state, action) => {
         case 'Dec':
             return {...state,firstCount: state.firstCount -1}
         case 'Reset':
-            return init()
+            return {...state, firstCount: 0, secondCount: 0}
+        case 'Inc10':
+            return {...state,secondCount: state.secondCount +10}
+        case 'Dec10':
+            return {...state,secondCount: state.secondCount -10}
         }
     }
 
@@ -24,9 +29,13 @@ const App = () => {
             {state.firstCount}
             <button onClick={()=>dispatch({type: 'Inc'})}>Inc</button>
             <button onClick={()=>dispatch({type: 'Dec'})}>Inc</button>
-            <button onClick={()=>dispatch({type: 'Inc'})}>Inc</button>
+            <button onClick={()=>dispatch({type: 'Reset'})}>Inc</button>
         </div>
-        <div></div>
+        <div>
+            {state.secondCount}
+            <button onClick={()=>dispatch({type: 'Inc10'})}>Inc10</button>
+            <button onClick={()=>dispatch({type: 'Dec10'})}>Inc10</button>
+        </div>
     </div>
   );
 }
