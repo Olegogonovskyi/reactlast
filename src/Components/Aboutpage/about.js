@@ -5,6 +5,7 @@ import {MyContext} from '../../index'
 const About = () => {
     const value = useContext(MyContext);
     console.log(value)
+    value.name = 'Xerxs'
     return (
         <div className={css.warp}>
             <div>То сайтик на якому Олько вчиться з javascript працювати, гортайте далі</div>
