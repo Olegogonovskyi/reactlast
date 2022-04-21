@@ -16,12 +16,12 @@ const Posts = () => {
     const nexPage = () => {
         let page = qwery.get('page')
         page = +page +1
-        setqwery({page:page.})
+        setqwery({page:page.toString()})
     }
     return (
         <div>
             <div>{posts.map((post)=><Post key={post.id} post={post}/>)}</div>
-            <button onClick={()=> nexPage()}></button>
+            <button onClick={()=> nexPage()}>Next</button>
 
         </div>
     );
