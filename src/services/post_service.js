@@ -2,7 +2,10 @@ import {axios_service} from './axios_service';
 import {urls} from '../constants';
 
 const post_service = {
-    getall: () => axios_service.get(urls.posts)
+    getall: (page, _limit: =2 ) => axios_service.get(urls.posts, {params{
+        _start: (page-1)*_limit,
+            _limit
+        }})
 
 }
 
