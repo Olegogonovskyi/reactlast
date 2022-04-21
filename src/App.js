@@ -1,6 +1,6 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 import {Mainlayout} from './Layout';
-import {Users, Posts, Singleuser, Singleuserposts} from './Components'
+import {Users, Posts, Singleuser, Singleuserposts, About} from './Components'
 import React from "react";
 
 const App = () => {
@@ -14,6 +14,8 @@ const App = () => {
             </Route>
         </Route>
         <Route path={'posts'} element={<Posts/>}/>
+          <Route path={'about_page'} element={<About/>}/>
+
 
 
 
