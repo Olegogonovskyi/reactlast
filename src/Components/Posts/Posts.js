@@ -12,7 +12,7 @@ const Posts = () => {
     const [posts, setposts] = useState([]);
     useEffect(()=> {
         post_service.getall(qwery.get('page')).then(({data})=> setposts(data))
-    }, [])
+    }, [qwery])
     const nexPage = () => {
         let page = qwery.get('page')
         page = +page +1
